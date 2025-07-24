@@ -1,0 +1,18 @@
+void new_dealloc(void * ptr, int size);
+void* malloc(int size);
+
+void* new_malloc(int size)
+{
+    void * ptr = malloc (size + sizeof(int));
+    *(int*)ptr = size + sizeof(int);
+    return (int*)ptr++;
+}
+
+void dealloc(void* ptr)
+{
+    new_free(ptr1, *((int*)ptr--))
+}
+
+
+void* ptr = new_malloc(10);
+free(ptr);
