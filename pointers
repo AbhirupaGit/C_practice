@@ -1,0 +1,51 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+void swap(int *ptr1, int *ptr2)
+{
+    int temp=*x;
+    *x=*y;
+    *y=temp;
+}
+
+int add(int a,int b)
+{
+ c=a+b;
+ return c;
+
+}
+
+
+int main(){
+    int a=1000;
+    int* ptr=&a;
+    printf("%d",ptr); //prints the address of a
+    printf("%d",*ptr); //prints the value of a
+    printf("%zu\n",sizeof(ptr)); //size of intpointer is 8 bytes 
+
+    int *ptr1=NULL // NULL pointer 
+    void *ptr2; //void pointer 
+    int *ptr3=(int*)malloc(sizeof(int)); //dynamic memory allocation 
+    free(ptr3) //free the memory region. after freeing the pointer becomes a dangling pointer 
+    ptr=NULL; //remove the dangling pointer 
+
+    //function pointer 
+    int (*fptr)(int,int);
+    fptr=&add; //assign address of add 
+    printf("%d",fptr(10,5)); //call the function via ptr 
+
+    //call by reference 
+    int x=10, y=20;
+    swap(&x,&y);
+    printf("%d %d\n",x,y);
+
+    //accessing array using pointer
+    int arr[] = { 100, 200, 300, 400 };
+     // Compiler converts below to *(arr + 2).
+    printf("%d ", arr[2]);
+    // So below also works.
+    printf("%d\n", *(arr + 2));
+
+    
+    return 0;
+}
