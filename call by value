@@ -1,0 +1,22 @@
+//Call by value 
+
+
+void swap(int x, int y)
+{
+ int temp=x;
+ y=temp;
+ temp=x;
+ 
+}
+
+int main()
+{
+  int a, int b;
+  a=10;
+  b=20;
+  swap(a,b);
+  printf(a,b);
+}
+
+
+
