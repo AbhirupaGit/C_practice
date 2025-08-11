@@ -1,0 +1,11 @@
+int []fun(int n)
+{
+ int *p;
+ p=(int *p)malloc(n*size_of(int))
+ return(p);
+}
+int main()
+{ 
+ int *A;
+ A=fun(5);
+}
