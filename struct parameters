@@ -1,0 +1,32 @@
+//struct passing by value 
+struct Rectangle
+{
+ int length;
+ int breadth;
+}
+
+int area(struct Rectangle r1)
+{
+ return r1.length*r1.bredth;
+}
+
+int main()
+{
+ struct Rectangle r={10,5};
+ printf("%d",area(r);
+}
+
+//Struct passing by address
+
+
+void change_length(struct Rectangle *r1,int l)
+{
+ = r1->length=l;
+ }
+
+
+int main()
+{
+ struct Rectangle r={10,5};
+ printf(%d",change_length(&r,l);
+}
