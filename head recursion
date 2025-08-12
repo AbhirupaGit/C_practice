@@ -1,0 +1,20 @@
+//Head recursion -> work is done at returning time , nothing at calling 
+void fun(int n)
+{
+ if(n>0)
+  {
+    fun(n-1);
+    printf("%d",n);
+  }
+}
+
+//Convert to loop 
+void fun(int n) 
+{
+  int i;
+  while(i<=n)
+  {
+   printf("%d",i);
+   i++;
+  }
+}
