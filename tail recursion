@@ -1,0 +1,27 @@
+//Tail recursion -> no work is done after calling the recursion function
+void fun(int n) 
+{
+  if(n==0)
+    return 1;
+  else
+  {
+    printf("%d",n);
+    fun(n-1);
+ }
+}
+
+int main()
+{
+  cin>>n;
+  fun(n);
+ 
+}
+
+
+//converting this to a loop 
+
+while(n>0)
+{
+  printf("%d",n);
+  n--;
+}
