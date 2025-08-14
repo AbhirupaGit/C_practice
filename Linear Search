@@ -1,0 +1,31 @@
+// Linear Search 
+struct Array
+{
+ int arr[5];
+ int size;
+ int length;
+}
+void swap(int *x,int *y)
+{
+ int temp;
+ temp=*x;
+ *x=*y;
+ *y=temp;
+}
+void LinearSearch(Struct *arr1, int n)
+{
+ int i;
+ for(i=0;i<arr1->length,i++)
+ {
+  if(arr1->arr[i]==n)
+   {
+    swap(&arr1->arr[i],&arr1->arr[0])
+    return i;
+}
+return -1;
+}
+int main()
+{
+  struct Array arr1={{1,3,5,7,9},5,5};
+  printf("Linear search index is%d%d",LinearSearch(&arr1,9);
+}
