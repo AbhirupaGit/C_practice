@@ -1,0 +1,52 @@
+//Linked list create , count no of nodes, sum 
+struct Node *
+{
+ int data;
+ struct Node *next;
+} *first=NULL;
+
+void Create(int A[],int n) 
+{
+int i;
+first=(struct Node*)malloc(sizeof(struct Node));
+first->data=A[0];
+first->next=NULL;
+struct Node *last,*temp;
+last=first;
+for(i=1;i<n;i++)
+ {
+  t=(struct Node)*malloc(sizeof(struct Node));
+  t->data=A[i];
+  t->next=NULL;
+  last->next=t;
+  last=t;
+}
+}
+
+int count(struct  Node *p)
+{
+ if(p!=NULL)
+  return count(p->next)+1;
+else
+ return 0;
+
+}
+
+int sum(struct Node *p)
+{
+ sum=0;
+ if(p!=NULL)
+   return sum(p->next)+p->data;
+ else
+  return 0;
+}
+
+int main()
+{
+ int A[]={1,2,3,4,5}
+ printf("create Linked List", Create(A,5);
+ printf("Display count", count(first));
+ printf("Display sum", sum(first));
+
+return 0;
+}
