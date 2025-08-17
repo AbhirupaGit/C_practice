@@ -1,0 +1,48 @@
+//circular linked list 
+struct Node
+{
+int data;
+struct Node *next;
+} *head
+
+void Create_LL(int A[],int n) 
+{
+ head=(struct Node*)malloc(sizeof(struct Node));
+ head->data=A[0];
+ head->next=head;
+ int i;
+ strcut Node *t,*last;
+ last=head;
+ for(i=1;i<n;i++)
+  {
+   t=(struct Node*)malloc(sizeof(struct Node));
+   t->data=A[i];
+   t->next=head;
+   last->next=t;
+   last=t;
+}
+}
+
+void Display(struct Node * h)
+{
+ flag=0;
+ if(flag==0||h!=head)
+ {
+  flag=1;
+  printf("CLL node value %d",h->data);
+  Display(h->next);
+}
+flag=0;
+}
+int main()
+{
+ A={1,2,3,4,5};
+ Create_LL(A,5);
+ Display(head);
+return 0;
+}
+
+
+   
+
+int main()
